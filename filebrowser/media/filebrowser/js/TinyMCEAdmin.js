@@ -1,6 +1,6 @@
 function CustomFileBrowser(field_name, url, type, win) {
 
-    var cmsURL = "/admin/filebrowser/browse/?pop=2";
+    var cmsURL = "/admin/business/photo/add/?_popup=1";
     cmsURL = cmsURL + "&type=" + type;
     
     tinyMCE.activeEditor.windowManager.open({
