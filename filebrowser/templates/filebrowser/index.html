@@ -46,7 +46,7 @@
     {% block object-tools %}
     <ul class="object-tools">
         <li><a href="{% url fb_mkdir %}{% query_string '' 'p' %}">{% trans "New Folder" %}</a></li>
-        <li><a href="/admin/business/photo/add/?_popup=2" class="focus">{% trans "Upload" %}</a></li>
+        <li><a href="/admin/business/photo/add/?_popup=1&fb=1" class="focus">{% trans "Upload" %}</a></li>
     </ul>
     {% endblock %}
     <div class="module filtered" id="changelist">
