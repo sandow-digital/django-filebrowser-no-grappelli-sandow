@@ -46,7 +46,7 @@
     {% block object-tools %}
     <ul class="object-tools">
         <!-- <li><a href="{% url fb_mkdir %}{% query_string '' 'p' %}">{% trans "New Folder" %}</a></li> //-->
-        <li><a href="{% if query.type == 'image' %}/admin/business/photo/add/?_popup=1&fb=1{% elif query.type == 'media' %}/admin/business/video/add/?_popup=1&fb=1{% endif %}" class="focus">{% trans "Upload" %}</a></li>
+        <li><a href="{% if query.type == 'image' %}/admin/business/photo/add/?_popup=1&fb=1{% else %}{% if query.type == 'media' %}/admin/business/video/add/?_popup=1&fb=1{% endif %}{% endif %}" class="focus">{% trans "Upload" %}</a></li>
     </ul>
     {% endblock %}
     <div class="module filtered" id="changelist">
