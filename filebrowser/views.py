@@ -49,7 +49,7 @@ def browse(request):
 
     # Redirect for images to use business photos
     if request.GET.get('type') == 'image':
-        return HttpResponseRedirect("/admin/business/photo/?_popup=1&type=image&pop=2&filter_type=Image")
+        return HttpResponseRedirect("/admin/business/photo/", request.GET)
  
     # QUERY / PATH CHECK
     query = request.GET.copy()
