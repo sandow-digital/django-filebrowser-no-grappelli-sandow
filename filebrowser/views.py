@@ -46,7 +46,11 @@ def browse(request):
     """
     Browse Files/Directories.
     """
-    
+
+    # Redirect for images to use business photos
+    if request.GET.get('type') == 'image':
+        return HttpResponseRedirect("/business/photo/add/?type=image&pop=2&filter_type=Image")
+ 
     # QUERY / PATH CHECK
     query = request.GET.copy()
     path = get_path(query.get('dir', ''))
