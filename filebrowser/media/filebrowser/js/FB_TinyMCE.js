@@ -22,14 +22,15 @@ var FileBrowserDialogue = {
         // close popup window
         tinyMCEPopup.close();
     },
-    photoSubmit : function (PhotoURL, PhotoCaption, PhotoTitle) {
+    photoSubmit : function (PhotoURL, PhotoAlternate, PhotoTitle, PhotoCaption) {
         var URL = PhotoURL;
         var win = tinyMCEPopup.getWindowArg("window");
 
         // insert information now
         win.document.getElementById(tinyMCEPopup.getWindowArg("input")).value = URL;
-        win.document.getElementById("alt").value = PhotoCaption;
+        win.document.getElementById("alt").value = PhotoAlternate;
         win.document.getElementById("title").value = PhotoTitle;
+        win.document.getElementById("caption").value = PhotoCaption;
 
         // change width/height & show preview
         if (win.ImageDialog){
